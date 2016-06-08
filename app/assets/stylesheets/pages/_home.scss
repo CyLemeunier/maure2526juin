@@ -2,3 +2,21 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+#signature_droite {
+  text-align: right;
+}
+
+#container_infos {
+  min-height: 200px;
+}
+
+.wrapper {
+  background-color: lightgrey;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+.fontawesome_home {
+  text-align: center;
+}

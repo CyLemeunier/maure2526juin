@@ -1,12 +1,12 @@
 class InscriptionsController < ApplicationController
 
   def index
-    @sh_n2 = Inscription.where(tableau: "simple homme", serie: "n2")
+    @sh_n2 = Inscription.where(tableau: "simple homme", serie: "N2")
     @sh_n3
     @sh_r4
     @sh_r5
     @sh_r6
-    @sh_d7
+    @sh_d7 = Inscription.where(tableau: "simple homme", serie: "D7")
     @sh_d8
     @sh_d9
     @sd_p
@@ -15,7 +15,7 @@ class InscriptionsController < ApplicationController
     @sd_r4
     @sd_r5
     @sd_r6
-    @sd_d7
+    @sd_d7 = Inscription.where(tableau: "simple dame", serie: "D7")
     @sd_d8
     @sd_d9
     @sd_p
@@ -55,7 +55,7 @@ class InscriptionsController < ApplicationController
   def create
     @inscription = Inscription.new(inscription_params)
     @inscription.save
-    redirect_to inscription_path(@inscription)
+    redirect_to inscriptions_path
   end
 
   def edit

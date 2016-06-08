@@ -1,1 +1,5 @@
 <p>Test liste des inscrits</p>
+
+<% @sd_d7.each do |inscrit| %>
+  <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+<% end %>

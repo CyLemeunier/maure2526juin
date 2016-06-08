@@ -1,3 +1,4 @@
+<%= render 'shared/banner' %>
 <div class="container">
 
   <h1>Bienvenue</h1>
@@ -19,8 +20,10 @@
       <h3>Informations</h3>
     </div>
     <div class="row col-xs-12 col-sm-6 col-md-3 fontawesome_home">
-      <i class="fa fa-user-plus fa-4x fa-border" aria-hidden="true"></i>
-      <h3>Inscriptions</h3>
+      <%= link_to new_inscription_path(@inscription) do %>
+        <i class="fa fa-user-plus fa-4x fa-border" aria-hidden="true"></i>
+      <h3>Inscription</h3>
+      <% end %>
     </div>
     <div class="row col-xs-12 col-sm-6 col-md-3 fontawesome_home">
       <i class="fa fa-file-text-o fa-4x fa-border" aria-hidden="true"></i>

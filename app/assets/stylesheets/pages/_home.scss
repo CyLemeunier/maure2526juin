@@ -12,11 +12,17 @@
 }
 
 .wrapper {
-  background-color: lightgrey;
+  background-color: $gray-lighter;
   padding-top: 40px;
   margin-top: 20px;
 }
 
 .fontawesome_home {
   text-align: center;
+  position: relative;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
 }

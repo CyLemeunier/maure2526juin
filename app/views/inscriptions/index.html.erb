@@ -42,7 +42,9 @@
                 <%= index + 1 %> / <%= inscrit.nom_joueur1.capitalize %> <%= inscrit.prenom_joueur1.capitalize %> - <%= inscrit.club_joueur1 %>
                 <% if current_user %>
                   - <a href="mailto:<%= inscrit.mail %>"><i class="fa fa-at" aria-hidden="true"></i></a>
-                  - <i class="fa fa-pencil" aria-hidden="true"></i>
+                  - <%= link_to edit_inscription_path(inscrit) do %>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <% end %>
                   - <i class="fa fa-trash-o" aria-hidden="true"></i>
                 <% end %>
               </div>

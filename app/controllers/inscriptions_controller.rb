@@ -60,16 +60,21 @@ class InscriptionsController < ApplicationController
   end
 
   def edit
-
+    @inscription = Inscription.find(params[:id])
   end
 
   def update
-
+    @inscription = Inscription.find(params[:id])
+    @inscription.update(inscription_params)
+    redirect_to inscriptions_path
   end
 
   def destroy
-
+    @inscription = Inscription.find(params[:id])
+    @inscription.destroy
+    redirect_to inscriptions_path
   end
+
 
   private
 

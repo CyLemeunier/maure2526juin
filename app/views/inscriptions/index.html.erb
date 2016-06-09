@@ -1,5 +1,349 @@
-<p>Test liste des inscrits</p>
+<div class="container text-center">
+  <h1>Liste des inscrits</h1>
+  <div style="padding: 30px;">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn-treehouse" data-toggle="collapse" data-target="#simplehomme" aria-expanded="false" aria-controls="collapseExample">Simple Homme</button>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn-treehouse" data-toggle="collapse" data-target="#simpledame" aria-expanded="false" aria-controls="collapseExample">Simple Dame</button>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn-treehouse" data-toggle="collapse" data-target="#doublehomme" aria-expanded="false" aria-controls="collapseExample">Double Homme</button>
+      </div>
+    </div>
+  </div>
+  <div style="padding: 30px;">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn-treehouse" data-toggle="collapse" data-target="#doubledame" aria-expanded="false" aria-controls="collapseExample">Double Dame</button>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <button class="btn-treehouse" data-toggle="collapse" data-target="#doublemixte" aria-expanded="false" aria-controls="collapseExample">Double Mixte</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @sd_d7.each do |inscrit| %>
-  <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
-<% end %>
+<div class="container">
+
+<!-- Simple Homme -->
+  <div class="collapse" id="simplehomme">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme N2</h4></div>
+        <% @sh_n2.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme N3</h4></div>
+        <% @sh_n3.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme R4</h4></div>
+        <% @sh_r4.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme R5</h4></div>
+        <% @sh_r5.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme R6</h4></div>
+        <% @sh_r6.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme D7</h4></div>
+        <% @sh_d7.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme D8</h4></div>
+        <% @sh_d8.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme D9</h4></div>
+        <% @sh_d9.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Homme P</h4></div>
+        <% @sh_p.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!-- Simple Dame -->
+  <div class="collapse" id="simpledame">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame N2</h4></div>
+        <% @sd_n2.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame N3</h4></div>
+        <% @sd_n3.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame R4</h4></div>
+        <% @sd_r4.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame R5</h4></div>
+        <% @sd_r5.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame R6</h4></div>
+        <% @sd_r6.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame D7</h4></div>
+        <% @sd_d7.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame D8</h4></div>
+        <% @sd_d8.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame D9</h4></div>
+        <% @sd_d9.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Simple Dame P</h4></div>
+        <% @sd_p.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!-- Double homme -->
+  <div class="collapse" id="doublehomme">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme N2</h4></div>
+        <% @dh_n2.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme N3</h4></div>
+        <% @dh_n3.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme R4</h4></div>
+        <% @dh_r4.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme R5</h4></div>
+        <% @dh_r5.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme R6</h4></div>
+        <% @dh_r6.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme D7</h4></div>
+        <% @dh_d7.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme D8</h4></div>
+        <% @dh_d8.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme D9</h4></div>
+        <% @dh_d9.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Homme P</h4></div>
+        <% @dh_p.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!-- Double Dame -->
+  <div class="collapse" id="doubledame">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame N2</h4></div>
+        <% @dd_n2.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame N3</h4></div>
+        <% @dd_n3.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame R4</h4></div>
+        <% @dd_r4.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame R5</h4></div>
+        <% @dd_r5.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame R6</h4></div>
+        <% @dd_r6.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame D7</h4></div>
+        <% @dd_d7.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame D8</h4></div>
+        <% @dd_d8.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame D9</h4></div>
+        <% @dd_d9.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Dame P</h4></div>
+        <% @dd_p.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<!-- Double Mixte -->
+  <div class="collapse" id="doublemixte">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte N2</h4></div>
+        <% @dm_n2.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte N3</h4></div>
+        <% @dm_n3.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte R4</h4></div>
+        <% @dm_r4.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte R5</h4></div>
+        <% @dm_r5.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte R6</h4></div>
+        <% @dm_r6.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte D7</h4></div>
+        <% @dm_d7.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte D8</h4></div>
+        <% @dm_d8.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte D9</h4></div>
+        <% @dm_d9.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="text-center"><h4>Double Mixte P</h4></div>
+        <% @dm_p.each do |inscrit| %>
+          <%= inscrit.nom_joueur1 %> <%= inscrit.prenom_joueur1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

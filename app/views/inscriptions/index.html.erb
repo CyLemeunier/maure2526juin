@@ -45,7 +45,9 @@
                   - <%= link_to edit_inscription_path(inscrit) do %>
                     <i class="fa fa-pencil" aria-hidden="true"></i>
                   <% end %>
-                  - <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  <% end %>
                 <% end %>
               </div>
               <% if current_user %>

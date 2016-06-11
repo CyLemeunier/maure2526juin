@@ -131,6 +131,6 @@ class InscriptionsController < ApplicationController
   def inscription_params
     params.require(:inscription).permit(:responsable, :mail, :tel, :tableau, :serie,
       :nom_joueur1, :prenom_joueur1, :licence_joueur1, :club_joueur1, :nom_joueur2,
-      :prenom_joueur2, :licence_joueur2, :club_joueur2)
+      :prenom_joueur2, :licence_joueur2, :club_joueur2, :paiement_joueur1, :paiement_joueur2)
   end
 end

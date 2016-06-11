@@ -1,20 +1,44 @@
-<div>
-  <div class="joueur_paire">
-    <%= index + 1 %> / <%= inscrit.nom_joueur1.upcase %> <%= inscrit.prenom_joueur1.capitalize %> - <%= inscrit.club_joueur1 %>
-    <% if current_user %>
-      - <%= inscrit.licence_joueur1 %>
-    <% end %>
+<div class="card-tableau">
+  <div>
+    <h4><%= hash[:name] %></h4>
   </div>
-  <% if current_user %>
-    <div>
-      <span style="font-size: 10px;">Resp. : <%= inscrit.responsable %> - <%= inscrit.tel %></span>
-      - <a href="mailto:<%= inscrit.mail %>"><i class="fa fa-at" aria-hidden="true"></i></a>
-      - <%= link_to edit_inscription_path(inscrit) do %>
-        <i class="fa fa-pencil" aria-hidden="true"></i>
+  <table class="table table-striped">
+      <tr>
+        <th></th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Club</th>
+        <th>Paiement</th>
+        <% if current_user %>
+          <th>Infos</th>
+        <% end %>
+      </tr>
+    <% if hash[:array].empty? %>
+      <div style="margin-bottom: 15px;">
+        <i class="fa fa-times" aria-hidden="true" style="color: red;"></i> Pas d'inscrit pour le moment
+      </div>
+    <% else %>
+      <% hash[:array].each_with_index do |inscrit, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= inscrit.nom_joueur1.upcase %></td>
+          <td><%= inscrit.prenom_joueur1.capitalize %></td>
+          <td><%= inscrit.club_joueur1 %></td>
+          <td></td>
+          <td>
+            <% if current_user %>
+              <span style="font-size: 10px;">Resp. : <%= inscrit.responsable %> - <%= inscrit.tel %></span>
+              - <a href="mailto:<%= inscrit.mail %>"><i class="fa fa-at" aria-hidden="true"></i></a>
+              - <%= link_to edit_inscription_path(inscrit) do %>
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              <% end %>
+              - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <% end %>
+            <% end %>
+          </td>
+        </tr>
       <% end %>
-      - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
-      <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </table>
 </div>

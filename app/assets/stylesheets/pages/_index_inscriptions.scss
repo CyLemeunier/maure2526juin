@@ -8,6 +8,17 @@
 
 .card-tableau {
   background-color: white;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   padding: 15px;
+}
+
+.flexbox {
+  display : flex;
+  justify-content: space-around;
+  margin: 25px 0 15px 0;
+}
+
+.minhotfix {
+   min-height: 0;
+   min-width: 0;
 }

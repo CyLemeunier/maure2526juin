@@ -25,7 +25,7 @@
           <td><%= inscrit.nom_joueur1.upcase %></td>
           <td><%= inscrit.prenom_joueur1.capitalize %></td>
           <td><%= inscrit.club_joueur1 %></td>
-          <td><%= inscrit.paiement_joueur1 %></td>
+          <td id="paiement_joueur1"><%= inscrit.paiement_joueur1 %></td>
           <% if current_user %>
             <td>
               <%= inscrit.licence_joueur1 %>
@@ -40,7 +40,9 @@
               - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
-              - <i class="fa fa-eur" aria-hidden="true"></i>
+              - <%= link_to update_paiement_inscription_path(inscrit), method: :post, remote: true do %>
+                <i class="fa fa-eur" aria-hidden="true"></i>
+              <% end %>
             </td>
           <% end %>
         </tr>

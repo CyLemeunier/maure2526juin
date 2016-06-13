@@ -40,7 +40,7 @@
               - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
               <% end %>
-              - <%= link_to update_paiement_inscription_path(inscrit), method: :post, remote: true do %>
+              - <%= link_to update_paiement_inscription_path(inscrit), method: :post do %>
                 <i class="fa fa-eur" aria-hidden="true"></i>
               <% end %>
             </td>

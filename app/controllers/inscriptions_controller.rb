@@ -125,9 +125,6 @@ class InscriptionsController < ApplicationController
     @inscription.paiement_joueur1 = "Payé"
     @inscription.save
 
-    respond_to do |format|
-      format.js
-    end
   end
 
   def destroy

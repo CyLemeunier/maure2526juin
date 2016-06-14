@@ -11,20 +11,25 @@
 </div>
 <%= render "form_for_inscriptions" %>
 
-<% content_for(:after_js) do %>
-  <script>
-    // when a tableau is selected
-    $('#inscription_tableau').change(function() {
-      // Value of tableau selected
-      var tableau = $('#inscription_tableau').val();
-      if( tableau == "simple homme" || "simple dame" ){
-        console.log('test')
-        $('#joueur1').show();
-      } else {
-        console.log('test2')
-        $('#joueur1').show();
-        $('#joueur2').show();
-      }
-    });
-  </script>
-<% end %>
+
+  <% content_for(:after_js) do %>
+    <script>
+      $(document).ready(function() {
+      // when a tableau is selected
+        $('select#inscription_tableau').change(function() {
+          console.log('test')
+          // Value of tableau selected
+          var tableau = $('select#inscription_tableau').val();
+          if( tableau == "simple homme" || "simple dame" ){
+            console.log('test')
+            $('#joueur1').show();
+          } else {
+            console.log('test2')
+            $('#joueur1').show();
+            $('#joueur2').show();
+          }
+        });
+      })
+    </script>
+  <% end %>
+

@@ -37,7 +37,20 @@
             </br>
             <%= inscrit.club_joueur2 %>
           </td>
-          <td></td>
+          <td>
+            <div>
+              <span id="paiement_joueur1_<%= inscrit.id %>"><%= inscrit.paiement_joueur1 %></span>
+              - <%= link_to update_paiement_inscription_path(inscrit), method: :post, remote: true do %>
+                <i class="fa fa-eur" aria-hidden="true"></i>
+              <% end %>
+            </div>
+            <div>
+              <span id="paiement_joueur2_<%= inscrit.id %>"><%= inscrit.paiement_joueur2 %></span>
+              - <%= link_to update_paiement2_inscription_path(inscrit), method: :post, remote: true do %>
+                <i class="fa fa-eur" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </td>
           <% if current_user %>
             <td>
               <%= inscrit.licence_joueur1 %>

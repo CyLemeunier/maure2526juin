@@ -132,6 +132,20 @@ class InscriptionsController < ApplicationController
     end
   end
 
+  def update_paiement2
+    @inscriptions = Inscription.all
+    @id = params[:id]
+    id = params[:id]
+    @inscription = Inscription.find(id)
+    @inscription.paiement_joueur2 = "Payé"
+    if @inscription.save
+      respond_to do |format|
+        format.html { redirect_to inscriptions_path(@inscriptions) }
+        format.js
+      end
+    end
+  end
+
   def destroy
     @inscription = Inscription.find(params[:id])
     @inscription.destroy

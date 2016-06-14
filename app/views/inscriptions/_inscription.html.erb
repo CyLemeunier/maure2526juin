@@ -25,13 +25,17 @@
           <td><%= inscrit.nom_joueur1.upcase %></td>
           <td><%= inscrit.prenom_joueur1.capitalize %></td>
           <td><%= inscrit.club_joueur1 %></td>
-          <td id="paiement_joueur1_<%= inscrit.id %>"><%= inscrit.paiement_joueur1 %></td>
+          <td>
+            <span id="paiement_joueur1_<%= inscrit.id %>"><%= inscrit.paiement_joueur1 %></span>
+            - <%= link_to update_paiement_inscription_path(inscrit), method: :post, remote: true do %>
+              <i class="fa fa-eur" aria-hidden="true"></i>
+            <% end %>
+          </td>
           <% if current_user %>
             <td>
               <%= inscrit.licence_joueur1 %>
             </td>
             <td>
-
               <span style="font-size: 10px;">Resp. : <%= inscrit.responsable %> - <%= inscrit.tel %></span>
               - <a href="mailto:<%= inscrit.mail %>"><i class="fa fa-at" aria-hidden="true"></i></a>
               - <%= link_to edit_inscription_path(inscrit) do %>
@@ -39,9 +43,6 @@
               <% end %>
               - <%= link_to inscription_path(inscrit), method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
-              <% end %>
-              - <%= link_to update_paiement_inscription_path(inscrit), method: :post, remote: true do %>
-                <i class="fa fa-eur" aria-hidden="true"></i>
               <% end %>
             </td>
           <% end %>

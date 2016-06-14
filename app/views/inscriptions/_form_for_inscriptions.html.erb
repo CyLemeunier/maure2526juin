@@ -8,7 +8,7 @@
       <%= i.input :serie, collection: SERIES %>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-6" id="joueur1" style="display:none">
       <p class="joueur">Joueur 1</p>
       <%= i.input :nom_joueur1, label: "Nom" %>
       <%= i.input :prenom_joueur1, label: "Prénom" %>
@@ -16,7 +16,7 @@
       <%= i.input :club_joueur1, label: "Club" %>
       <%= i.input :paiement_joueur1, as: :hidden, :input_html => { :value => "En attente de paiement" } %>
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-sm-6" id="joueur2" style="display:none">
       <p class="joueur">Joueur 2</p>
       <%= i.input :nom_joueur2, label: "Nom" %>
       <%= i.input :prenom_joueur2, label: "Prénom" %>

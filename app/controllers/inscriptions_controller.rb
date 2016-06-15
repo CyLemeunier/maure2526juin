@@ -138,12 +138,40 @@ class InscriptionsController < ApplicationController
     end
   end
 
+  def downdate_paiement
+    @inscriptions = Inscription.all
+    @id = params[:id]
+    id = params[:id]
+    @inscription = Inscription.find(id)
+    @inscription.paiement_joueur1 = "En attente de paiement"
+    if @inscription.save
+      respond_to do |format|
+        format.html { redirect_to inscriptions_path(@inscriptions) }
+        format.js
+      end
+    end
+  end
+
   def update_paiement2
     @inscriptions = Inscription.all
     @id = params[:id]
     id = params[:id]
     @inscription = Inscription.find(id)
     @inscription.paiement_joueur2 = "Payé"
+    if @inscription.save
+      respond_to do |format|
+        format.html { redirect_to inscriptions_path(@inscriptions) }
+        format.js
+      end
+    end
+  end
+
+  def downdate_paiement2
+    @inscriptions = Inscription.all
+    @id = params[:id]
+    id = params[:id]
+    @inscription = Inscription.find(id)
+    @inscription.paiement_joueur2 = "En attente de paiement"
     if @inscription.save
       respond_to do |format|
         format.html { redirect_to inscriptions_path(@inscriptions) }

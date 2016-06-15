@@ -1,4 +1,9 @@
 <div class="container text-center">
+  <div>
+    <h3>N'oubliez pas si vous venez d'effectuer une inscription :</h3>
+    <p><strong>Remplissez la <%= link_to "fiche d'inscription (clic)", asset_path("Inscription_MBC_NRD.xls") %></strong> qui récapitule la ou les inscriptions que vous venez d'effectuer </p>
+    <p>3) <strong>Envoyer la fiche d'inscription et le règlement</strong> à l’ordre du Maure Badminton Club <u>avant le Mercredi 15 juin 2016</u> à :</p>
+  </div>
   <h1>Liste des inscrits</h1>
     <div class="flexbox">
       <button class="btn-treehouse minhotfix" data-toggle="collapse" data-target="#simplehomme" aria-expanded="false" aria-controls="collapseExample">Simple Homme</button>
@@ -7,6 +12,7 @@
       <button class="btn-treehouse minhotfix" data-toggle="collapse" data-target="#doubledame" aria-expanded="false" aria-controls="collapseExample">Double Dame</button>
       <button class="btn-treehouse minhotfix" data-toggle="collapse" data-target="#doublemixte" aria-expanded="false" aria-controls="collapseExample">Double Mixte</button>
     </div>
+
     <div>
       <% if current_user %>
         <%= link_to "Excel", inscriptions_path(format: "xls") %>

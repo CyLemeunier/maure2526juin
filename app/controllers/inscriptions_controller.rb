@@ -96,6 +96,11 @@ class InscriptionsController < ApplicationController
     @dmp = Inscription.where(tableau: "double mixte", serie: "P").order(:id)
     @dm_p = { name: "Double Mixte P", array: @dmp}
     @dm = [@dm_n2, @dm_n3, @dm_r4, @dm_r5, @dm_r6, @dm_d7, @dm_d8, @dm_d9, @dm_p]
+    @inscriptions = Inscription.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @inscriptions.as_csv }
+    end
   end
 
   def new

@@ -110,8 +110,11 @@ class InscriptionsController < ApplicationController
 
   def create
     @inscription = Inscription.new(inscription_params)
-    @inscription.save
-    redirect_to inscriptions_path
+    if @inscription.save
+      redirect_to inscriptions_path
+    else
+      render new
+    end
   end
 
   def edit

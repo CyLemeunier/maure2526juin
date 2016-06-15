@@ -1,0 +1,30 @@
+<table>
+  <tr>
+    <th>Tableau</th>
+    <th>Serie</th>
+    <th>J1 Nom</th>
+    <th>Licence J1</th>
+    <th>Club J1</th>
+    <th>Paiement J1</th>
+    <th>J2 Nom</th>
+    <th>Licence J2</th>
+    <th>Club J2</th>
+    <th>Paiement J2</th>
+    <th>Mail</th>
+  </tr>
+  <% @inscriptions.each do |inscription| %>
+    <tr>
+      <td><%= inscription.tableau %></td>
+      <td><%= inscription.serie %></td>
+      <td><%= inscription.nom_joueur1 %> <%= inscription.prenom_joueur1 %></td>
+      <td><%= inscription.licence_joueur1 %></td>
+      <td><%= inscription.club_joueur1 %></td>
+      <td><%= inscription.paiement_joueur1 %></td>
+      <td><%= inscription.nom_joueur2 %> <%= inscription.prenom_joueur2 %></td>
+      <td><%= inscription.licence_joueur2 %></td>
+      <td><%= inscription.club_joueur2 %></td>
+      <td><%= inscription.paiement_joueur2 %></td>
+      <td><%= inscription.mail %></td>
+    </tr>
+  <% end %>
+</table>

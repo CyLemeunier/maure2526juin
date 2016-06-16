@@ -5,20 +5,17 @@
     <p>2) <strong>Envoyer la fiche d'inscription et le règlement</strong> à l’ordre du Maure Badminton Club <u>avant le Mercredi 15 juin 2016</u> à :</p>
   </div>
   <h1>Liste des inscrits</h1>
-    <select name="select" id="select_tableau">
-      <option value="" selected></option>
-      <option value="simple homme">Simple Homme</option>
-      <option value="simple dame">Simple Dame</option>
-      <option value="double homme">Double Homme</option>
-      <option value="double dame">Double Dame</option>
-      <option value="double mixte">Double Mixte</option>
-    </select>
-
-    <div>
-      <% if current_user %>
-        <%= link_to "Excel", inscriptions_path(format: "xls") %>
-      <% end %>
-    </div>
+  <select name="select" id="select_tableau">
+    <option value="" selected></option>
+    <option value="simple homme">Simple Homme</option>
+    <option value="simple dame">Simple Dame</option>
+    <option value="double homme">Double Homme</option>
+    <option value="double dame">Double Dame</option>
+    <option value="double mixte">Double Mixte</option>
+  </select>
+  <% if current_user %>
+    <%= link_to "Télécharger en Excel", inscriptions_path(format: "xls"), class: "link_home" %>
+  <% end %>
 </div>
 
 <div class="wrapper" id="wrapper_index">
